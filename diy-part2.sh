@@ -1,6 +1,6 @@
 lan_ip='192.168.3.1'                                                        # Lan Ip地址
 utc_name='Asia\/Shanghai'                                                   # 时区
-delete_bootstrap=true                                                       # 是否删除默认主题 true 、false
+delete_bootstrap=false                                                     # 是否删除默认主题 true 、false
 
 
 
@@ -20,5 +20,5 @@ if [ $delete_bootstrap ]; then
   sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 fi
 
-echo "修改默认主题"
-sed -i "s/bootstrap/$edge/g" feeds/luci/modules/luci-base/root/etc/config/luci
+#echo "修改默认主题"
+#sed -i "s/bootstrap/$edge/g" feeds/luci/modules/luci-base/root/etc/config/luci
